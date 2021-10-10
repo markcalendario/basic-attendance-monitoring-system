@@ -1,0 +1,673 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+$coal: rgb(29, 29, 29);
+$white: rgb(241, 241, 241);
+$whiteAccent: white;
+$red: rgb(255, 0, 85);
+$green: rgb(0, 148, 91);
+$orange: darkorange;
+$blue: royalblue;
+
+.deactivatedteacherbtn,
+.deactivatedstudentbtn {
+  background-color: rgb(255, 0, 85);
+  border: 0;
+  padding: 10px;
+  text-decoration: none;
+  color: white;
+}
+
+.activeteacherbtn,
+.activestudentbtn {
+  background-color: $green;
+  border: 0;
+  padding: 10px;
+  text-decoration: none;
+  color: white;
+}
+
+@mixin shadow {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+body {
+  background-color: $white;
+}
+
+.dark-nav {
+  background-color: $coal;
+  color: $white;
+}
+
+.center-nav {
+  justify-content: center;
+}
+
+nav {
+  background-color: transparent;
+  width: 100%;
+  color: $coal;
+
+  .container {
+    .wrapper {
+      padding: 10px 0;
+
+      .ams-brand {
+        margin: auto;
+        display: flex;
+        align-items: center;
+        width: 130px;
+        justify-content: space-between;
+        .img-cont {
+          width: 50px;
+          overflow: hidden;
+          border-radius: 50px;
+          img {
+            width: 100%;
+          }
+        }
+      }
+
+      .ams-links {
+        margin: 10px 0;
+        text-align: center;
+        display: flex;
+        justify-content: space-around;
+
+        a {
+          color: $coal;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+#front {
+  background: url(../files/wallpaper.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .container {
+    .wrapper {
+      .texts {
+        text-align: center;
+        color: $white;
+        padding: 150px 0;
+
+        img {
+          width: 100px;
+          animation: pulse 1s infinite;
+        }
+
+        @keyframes pulse {
+          from {
+            transform: scale(1);
+          }
+          50% {
+            transform: scale(1.1);
+          }
+          100% {
+            transform: scale(1);
+          }
+        }
+
+        h1 {
+          font-size: 50px;
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+}
+
+#login {
+  padding: 50px 0 50px 0;
+
+  .container {
+    .wrapper {
+      .left {
+        text-align: center;
+        margin: 0 0 30px 0;
+      }
+
+      .right {
+        background-color: $whiteAccent;
+        @include shadow();
+        padding: 20px;
+        border-radius: 10px;
+
+        form {
+          fieldset {
+            border: 0;
+            margin: 10px 0;
+
+            input[type="text"],
+            input[type="password"] {
+              width: calc(100% - 20px);
+              padding: 10px;
+              margin: auto;
+              border: 0;
+              border-bottom: 1px $coal solid;
+            }
+          }
+
+          input[type="submit"] {
+            margin: 10px 0;
+            width: 100%;
+            padding: 10px;
+            border: 0;
+            background: green;
+            color: $white;
+            @include shadow;
+          }
+        }
+      }
+    }
+  }
+}
+
+#about {
+  padding: 50px 0;
+  background-color: $whiteAccent;
+
+  .container {
+    h1 {
+      text-align: center;
+      margin: 0 0 30px 0;
+    }
+    .wrapper {
+      .left {
+        width: 100%;
+        height: 200px;
+        text-align: center;
+        overflow: hidden;
+        margin: 0 0 30px 0;
+        img {
+          width: 200px;
+        }
+      }
+    }
+  }
+}
+
+/////////////////////
+
+#welcomer {
+  padding: 50px 0;
+  .container {
+    .wrapper {
+      form {
+        margin: 10px 0;
+        button {
+          background-color: $red;
+          padding: 8px;
+          color: $white;
+          border: 0;
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+}
+
+#attendance {
+  padding: 50px 0;
+  background-color: $whiteAccent;
+
+  .container {
+    .wrapper {
+      form {
+        display: flex;
+        flex-direction: column;
+        .attended {
+          margin: 3px 0;
+          color: green;
+        }
+
+        .not-available {
+          margin: 3px 0;
+          color: $red;
+        }
+
+        button {
+          margin: 5px 0;
+          background-color: green;
+          border: 0;
+          padding: 10px;
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+#controls {
+  padding: 20px 0;
+  background-color: $whiteAccent;
+  .container {
+    .wrapper {
+      .controls {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        padding: 20px 0;
+
+        .active {
+          background-color: gray;
+        }
+
+        a {
+          padding: 20px;
+          margin: 10px 0;
+          border: 0;
+          border-radius: 10px;
+          color: $white;
+          @include shadow;
+          text-decoration: none;
+          background-color: $coal;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+#panel {
+  padding: 30px 0;
+
+  .container {
+    .wrapper {
+      .sec-creator {
+        margin: 20px 0;
+
+        form {
+          display: flex;
+          flex-direction: column;
+
+          button {
+            padding: 10px 0;
+            color: $white;
+            border: 0;
+            border-radius: 5px;
+
+            &[name="create-section"],
+            &[name="create-teacher"],
+            &[name="add-student"] {
+              background-color: $green;
+            }
+
+            &[name="save-section"],
+            &[name="save-teacher"],
+            &[name="save-student"],
+            &[name="save-add-student"] {
+              background-color: $blue;
+            }
+
+            &[name="cancel"] {
+              background-color: $red;
+            }
+          }
+
+          .input-group {
+            background-color: $whiteAccent;
+            padding: 20px 10px;
+            margin: 10px 0;
+            border-radius: 10px;
+            @include shadow;
+
+            fieldset {
+              border: 0;
+              display: flex;
+              flex-direction: column;
+              padding: 10px 0;
+              input,
+              select {
+                border: 0;
+                border-bottom: 1px $coal solid;
+              }
+            }
+          }
+        }
+      }
+
+      .sec-list,
+      .stud-list {
+        padding: 20px 0;
+      }
+
+      .sec-list {
+        table {
+          width: 100%;
+          text-align: left;
+          tbody {
+            tr {
+              th,
+              td {
+                width: calc(100% / 3);
+                padding: 10px;
+              }
+
+              th {
+                background-color: $coal;
+                color: $white;
+              }
+
+              td {
+                background-color: $whiteAccent;
+
+                button {
+                  border: 0;
+                  color: $white;
+                  padding: 5px;
+                }
+
+                .edit {
+                  background-color: $green;
+                }
+
+                .deactivate,
+                .cancel {
+                  background-color: $red;
+                }
+
+                .save {
+                  background-color: royalblue;
+                }
+
+                .restore {
+                  background-color: royalblue;
+                }
+
+                .edit {
+                  background-color: $green;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .stud-list {
+        table {
+          width: 100%;
+          text-align: left;
+          tbody {
+            tr {
+              th,
+              td {
+                width: calc(100% / 4);
+                padding: 10px;
+              }
+
+              th {
+                background-color: $coal;
+                color: $white;
+              }
+
+              td {
+                background-color: $whiteAccent;
+
+                button {
+                  border: 0;
+                  color: $white;
+                  padding: 5px;
+                }
+
+                .edit {
+                  background-color: $green;
+                }
+
+                .deactivate {
+                  background-color: $red;
+                }
+
+                .restore {
+                  background-color: royalblue;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .fac-stud-list {
+        table {
+          width: 100%;
+          text-align: left;
+          tbody {
+            tr {
+              th,
+              td {
+                width: calc(100% / 5);
+                padding: 10px;
+              }
+
+              th {
+                background-color: $coal;
+                color: $white;
+              }
+
+              td {
+                background-color: $whiteAccent;
+
+                button {
+                  border: 0;
+                  color: $white;
+                  padding: 5px;
+                }
+
+                .edit {
+                  background-color: $green;
+                }
+
+                .deactivate {
+                  background-color: $red;
+                }
+
+                .restore,
+                .save {
+                  background-color: royalblue;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .date-picker {
+        form {
+          input[type="date"] {
+            width: 200px;
+          }
+
+          input[type="submit"] {
+            background-color: $green;
+            color: $white;
+            padding: 10px;
+            border: 0;
+          }
+        }
+      }
+
+      .attendance-list {
+        padding: 20px 0;
+
+        #attendance-table {
+          font-size: small;
+        }
+
+        table {
+          width: 100%;
+          text-align: left;
+          tbody {
+            tr {
+              th,
+              td {
+                width: calc(100% / 3);
+                padding: 10px;
+              }
+
+              th {
+                background-color: $coal;
+                color: $white;
+              }
+
+              td {
+                background-color: $whiteAccent;
+
+                button {
+                  border: 0;
+                  color: $white;
+                  padding: 5px;
+                }
+
+                .edit {
+                  background-color: $green;
+                }
+
+                .delete {
+                  background-color: $red;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  nav {
+    .container {
+      .center-nav {
+        justify-content: center !important;
+      }
+
+      .wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .ams-brand {
+          margin: 0;
+
+          .img-cont {
+            img {
+            }
+          }
+        }
+
+        .ams-links {
+          display: flex;
+          justify-content: space-around;
+          width: 40%;
+
+          a {
+          }
+        }
+      }
+    }
+  }
+
+  #login {
+    .container {
+      .wrapper {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        .left {
+          width: calc(100% / 2 - 2%);
+          text-align: left;
+
+          h1 {
+            font-size: xx-large;
+          }
+        }
+
+        .right {
+          width: calc(100% / 2 - 2%);
+
+          form {
+            fieldset {
+              input[type="text"],
+              input[type="password"] {
+              }
+            }
+
+            input[type="submit"] {
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #about {
+    padding: 50px 0;
+    background-color: $whiteAccent;
+
+    .container {
+      h1 {
+        text-align: center;
+        margin: 0 0 50px 0;
+      }
+      .wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        .left {
+          width: calc(100% / 2 - 2%);
+          text-align: center;
+          img {
+            width: 200px;
+          }
+        }
+
+        .right {
+          width: calc(100% / 2 - 2%);
+        }
+      }
+    }
+  }
+
+  ///////////////
+
+  #controls {
+    padding: 30px 0;
+    background-color: $whiteAccent;
+    .container {
+      .wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        h1 {
+          width: calc(100% / 3);
+        }
+        .controls {
+          width: calc(100% / 1);
+          display: flex;
+          justify-content: space-between;
+          flex-direction: row;
+
+          button {
+            &[name="section"] {
+            }
+
+            &[name="teachers"] {
+            }
+
+            &[name="allover-attendance"] {
+            }
+          }
+        }
+      }
+    }
+  }
+}

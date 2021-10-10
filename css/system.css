@@ -1,0 +1,647 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.deactivatedteacherbtn,
+.deactivatedstudentbtn {
+  background-color: #ff0055;
+  border: 0;
+  padding: 10px;
+  text-decoration: none;
+  color: white;
+}
+
+.activeteacherbtn,
+.activestudentbtn {
+  background-color: #00945b;
+  border: 0;
+  padding: 10px;
+  text-decoration: none;
+  color: white;
+}
+
+body {
+  background-color: #f1f1f1;
+}
+
+.dark-nav {
+  background-color: #1d1d1d;
+  color: #f1f1f1;
+}
+
+.center-nav {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+nav {
+  background-color: transparent;
+  width: 100%;
+  color: #1d1d1d;
+}
+
+nav .container .wrapper {
+  padding: 10px 0;
+}
+
+nav .container .wrapper .ams-brand {
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 130px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+nav .container .wrapper .ams-brand .img-cont {
+  width: 50px;
+  overflow: hidden;
+  border-radius: 50px;
+}
+
+nav .container .wrapper .ams-brand .img-cont img {
+  width: 100%;
+}
+
+nav .container .wrapper .ams-links {
+  margin: 10px 0;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+nav .container .wrapper .ams-links a {
+  color: #1d1d1d;
+  text-decoration: none;
+}
+
+#front {
+  background: url(../files/wallpaper.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#front .container .wrapper .texts {
+  text-align: center;
+  color: #f1f1f1;
+  padding: 150px 0;
+}
+
+#front .container .wrapper .texts img {
+  width: 100px;
+  -webkit-animation: pulse 1s infinite;
+          animation: pulse 1s infinite;
+}
+
+@-webkit-keyframes pulse {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+#front .container .wrapper .texts h1 {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+#login {
+  padding: 50px 0 50px 0;
+}
+
+#login .container .wrapper .left {
+  text-align: center;
+  margin: 0 0 30px 0;
+}
+
+#login .container .wrapper .right {
+  background-color: white;
+  -webkit-box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+          box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#login .container .wrapper .right form fieldset {
+  border: 0;
+  margin: 10px 0;
+}
+
+#login .container .wrapper .right form fieldset input[type="text"],
+#login .container .wrapper .right form fieldset input[type="password"] {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin: auto;
+  border: 0;
+  border-bottom: 1px #1d1d1d solid;
+}
+
+#login .container .wrapper .right form input[type="submit"] {
+  margin: 10px 0;
+  width: 100%;
+  padding: 10px;
+  border: 0;
+  background: green;
+  color: #f1f1f1;
+  -webkit-box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+          box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+#about {
+  padding: 50px 0;
+  background-color: white;
+}
+
+#about .container h1 {
+  text-align: center;
+  margin: 0 0 30px 0;
+}
+
+#about .container .wrapper .left {
+  width: 100%;
+  height: 200px;
+  text-align: center;
+  overflow: hidden;
+  margin: 0 0 30px 0;
+}
+
+#about .container .wrapper .left img {
+  width: 200px;
+}
+
+#welcomer {
+  padding: 50px 0;
+}
+
+#welcomer .container .wrapper form {
+  margin: 10px 0;
+}
+
+#welcomer .container .wrapper form button {
+  background-color: #ff0055;
+  padding: 8px;
+  color: #f1f1f1;
+  border: 0;
+  border-radius: 5px;
+}
+
+#attendance {
+  padding: 50px 0;
+  background-color: white;
+}
+
+#attendance .container .wrapper form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#attendance .container .wrapper form .attended {
+  margin: 3px 0;
+  color: green;
+}
+
+#attendance .container .wrapper form .not-available {
+  margin: 3px 0;
+  color: #ff0055;
+}
+
+#attendance .container .wrapper form button {
+  margin: 5px 0;
+  background-color: green;
+  border: 0;
+  padding: 10px;
+  color: white;
+}
+
+#controls {
+  padding: 20px 0;
+  background-color: white;
+}
+
+#controls .container .wrapper .controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 20px 0;
+}
+
+#controls .container .wrapper .controls .active {
+  background-color: gray;
+}
+
+#controls .container .wrapper .controls a {
+  padding: 20px;
+  margin: 10px 0;
+  border: 0;
+  border-radius: 10px;
+  color: #f1f1f1;
+  -webkit-box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+          box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  text-decoration: none;
+  background-color: #1d1d1d;
+  text-align: center;
+}
+
+#panel {
+  padding: 30px 0;
+}
+
+#panel .container .wrapper .sec-creator {
+  margin: 20px 0;
+}
+
+#panel .container .wrapper .sec-creator form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#panel .container .wrapper .sec-creator form button {
+  padding: 10px 0;
+  color: #f1f1f1;
+  border: 0;
+  border-radius: 5px;
+}
+
+#panel .container .wrapper .sec-creator form button[name="create-section"], #panel .container .wrapper .sec-creator form button[name="create-teacher"], #panel .container .wrapper .sec-creator form button[name="add-student"] {
+  background-color: #00945b;
+}
+
+#panel .container .wrapper .sec-creator form button[name="save-section"], #panel .container .wrapper .sec-creator form button[name="save-teacher"], #panel .container .wrapper .sec-creator form button[name="save-student"], #panel .container .wrapper .sec-creator form button[name="save-add-student"] {
+  background-color: royalblue;
+}
+
+#panel .container .wrapper .sec-creator form button[name="cancel"] {
+  background-color: #ff0055;
+}
+
+#panel .container .wrapper .sec-creator form .input-group {
+  background-color: white;
+  padding: 20px 10px;
+  margin: 10px 0;
+  border-radius: 10px;
+  -webkit-box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+          box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+#panel .container .wrapper .sec-creator form .input-group fieldset {
+  border: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 10px 0;
+}
+
+#panel .container .wrapper .sec-creator form .input-group fieldset input,
+#panel .container .wrapper .sec-creator form .input-group fieldset select {
+  border: 0;
+  border-bottom: 1px #1d1d1d solid;
+}
+
+#panel .container .wrapper .sec-list,
+#panel .container .wrapper .stud-list {
+  padding: 20px 0;
+}
+
+#panel .container .wrapper .sec-list table {
+  width: 100%;
+  text-align: left;
+}
+
+#panel .container .wrapper .sec-list table tbody tr th,
+#panel .container .wrapper .sec-list table tbody tr td {
+  width: calc(100% / 3);
+  padding: 10px;
+}
+
+#panel .container .wrapper .sec-list table tbody tr th {
+  background-color: #1d1d1d;
+  color: #f1f1f1;
+}
+
+#panel .container .wrapper .sec-list table tbody tr td {
+  background-color: white;
+}
+
+#panel .container .wrapper .sec-list table tbody tr td button {
+  border: 0;
+  color: #f1f1f1;
+  padding: 5px;
+}
+
+#panel .container .wrapper .sec-list table tbody tr td .edit {
+  background-color: #00945b;
+}
+
+#panel .container .wrapper .sec-list table tbody tr td .deactivate,
+#panel .container .wrapper .sec-list table tbody tr td .cancel {
+  background-color: #ff0055;
+}
+
+#panel .container .wrapper .sec-list table tbody tr td .save {
+  background-color: royalblue;
+}
+
+#panel .container .wrapper .sec-list table tbody tr td .restore {
+  background-color: royalblue;
+}
+
+#panel .container .wrapper .sec-list table tbody tr td .edit {
+  background-color: #00945b;
+}
+
+#panel .container .wrapper .stud-list table {
+  width: 100%;
+  text-align: left;
+}
+
+#panel .container .wrapper .stud-list table tbody tr th,
+#panel .container .wrapper .stud-list table tbody tr td {
+  width: calc(100% / 4);
+  padding: 10px;
+}
+
+#panel .container .wrapper .stud-list table tbody tr th {
+  background-color: #1d1d1d;
+  color: #f1f1f1;
+}
+
+#panel .container .wrapper .stud-list table tbody tr td {
+  background-color: white;
+}
+
+#panel .container .wrapper .stud-list table tbody tr td button {
+  border: 0;
+  color: #f1f1f1;
+  padding: 5px;
+}
+
+#panel .container .wrapper .stud-list table tbody tr td .edit {
+  background-color: #00945b;
+}
+
+#panel .container .wrapper .stud-list table tbody tr td .deactivate {
+  background-color: #ff0055;
+}
+
+#panel .container .wrapper .stud-list table tbody tr td .restore {
+  background-color: royalblue;
+}
+
+#panel .container .wrapper .fac-stud-list table {
+  width: 100%;
+  text-align: left;
+}
+
+#panel .container .wrapper .fac-stud-list table tbody tr th,
+#panel .container .wrapper .fac-stud-list table tbody tr td {
+  width: calc(100% / 5);
+  padding: 10px;
+}
+
+#panel .container .wrapper .fac-stud-list table tbody tr th {
+  background-color: #1d1d1d;
+  color: #f1f1f1;
+}
+
+#panel .container .wrapper .fac-stud-list table tbody tr td {
+  background-color: white;
+}
+
+#panel .container .wrapper .fac-stud-list table tbody tr td button {
+  border: 0;
+  color: #f1f1f1;
+  padding: 5px;
+}
+
+#panel .container .wrapper .fac-stud-list table tbody tr td .edit {
+  background-color: #00945b;
+}
+
+#panel .container .wrapper .fac-stud-list table tbody tr td .deactivate {
+  background-color: #ff0055;
+}
+
+#panel .container .wrapper .fac-stud-list table tbody tr td .restore,
+#panel .container .wrapper .fac-stud-list table tbody tr td .save {
+  background-color: royalblue;
+}
+
+#panel .container .wrapper .date-picker form input[type="date"] {
+  width: 200px;
+}
+
+#panel .container .wrapper .date-picker form input[type="submit"] {
+  background-color: #00945b;
+  color: #f1f1f1;
+  padding: 10px;
+  border: 0;
+}
+
+#panel .container .wrapper .attendance-list {
+  padding: 20px 0;
+}
+
+#panel .container .wrapper .attendance-list #attendance-table {
+  font-size: small;
+}
+
+#panel .container .wrapper .attendance-list table {
+  width: 100%;
+  text-align: left;
+}
+
+#panel .container .wrapper .attendance-list table tbody tr th,
+#panel .container .wrapper .attendance-list table tbody tr td {
+  width: calc(100% / 3);
+  padding: 10px;
+}
+
+#panel .container .wrapper .attendance-list table tbody tr th {
+  background-color: #1d1d1d;
+  color: #f1f1f1;
+}
+
+#panel .container .wrapper .attendance-list table tbody tr td {
+  background-color: white;
+}
+
+#panel .container .wrapper .attendance-list table tbody tr td button {
+  border: 0;
+  color: #f1f1f1;
+  padding: 5px;
+}
+
+#panel .container .wrapper .attendance-list table tbody tr td .edit {
+  background-color: #00945b;
+}
+
+#panel .container .wrapper .attendance-list table tbody tr td .delete {
+  background-color: #ff0055;
+}
+
+@media screen and (min-width: 768px) {
+  nav .container .center-nav {
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
+  }
+  nav .container .wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  nav .container .wrapper .ams-brand {
+    margin: 0;
+  }
+  nav .container .wrapper .ams-links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: 40%;
+  }
+  #login .container .wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #login .container .wrapper .left {
+    width: calc(100% / 2 - 2%);
+    text-align: left;
+  }
+  #login .container .wrapper .left h1 {
+    font-size: xx-large;
+  }
+  #login .container .wrapper .right {
+    width: calc(100% / 2 - 2%);
+  }
+  #about {
+    padding: 50px 0;
+    background-color: white;
+  }
+  #about .container h1 {
+    text-align: center;
+    margin: 0 0 50px 0;
+  }
+  #about .container .wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  #about .container .wrapper .left {
+    width: calc(100% / 2 - 2%);
+    text-align: center;
+  }
+  #about .container .wrapper .left img {
+    width: 200px;
+  }
+  #about .container .wrapper .right {
+    width: calc(100% / 2 - 2%);
+  }
+  #controls {
+    padding: 30px 0;
+    background-color: white;
+  }
+  #controls .container .wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  #controls .container .wrapper h1 {
+    width: calc(100% / 3);
+  }
+  #controls .container .wrapper .controls {
+    width: calc(100% / 1);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+/*# sourceMappingURL=system.css.map */
