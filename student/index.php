@@ -100,7 +100,7 @@ function attendanceIsAvailable() {
     $hour = date('H');
     $day = date('N');
 
-    $isAvailableOnHours = $hour >= 6 && $hour <= 12; # Condition para tignan kung Alas Sais hanggang Alas 12
+    $isAvailableOnHours = $hour >= 6 && $hour <= 18; # Condition para tignan kung Alas Sais hanggang Alas 12
     $isAvailableOnDay = $day != 7; // Determiner kung not Equal sa Sunday today 
 
     if ($isAvailableOnHours && $isAvailableOnDay) {
@@ -173,7 +173,7 @@ function attendanceIsAvailable() {
                         <?php
                     } else if (!attendanceIsAvailable()){
                         ?>
-                        <p class="not-available">Attendance isn't on this day/time. <br> Because it is <?php echo date('l h:i A'); ?></p>
+                        <p class="not-available">Attendance isn't open at this moment. <br> Current time: <?php echo date('l h:i A'); ?></p>
                         <?php
                     } else if (!isAlreadyPresent() && attendanceIsAvailable()) {
                         ?>

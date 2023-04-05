@@ -38,14 +38,14 @@ function validateLogin() {
 function checkLogin() {
     $con = connect();
 
-    $username = mysqli_real_escape_string($con, $_POST['password']);
+    $username = mysqli_real_escape_string($con, $_POST['username']);
     $password = mysqli_real_escape_string($con, $_POST['password']);
 
     $stmt = $con->prepare('SELECT * FROM account WHERE username = ? AND password = ?');
     $stmt->bind_param('ss', $username, $password);
     $stmt->execute();
     $res = $stmt->get_result();
-    
+
     if ($res->num_rows > 0) {
         logInUser($username, $password);
     } else {

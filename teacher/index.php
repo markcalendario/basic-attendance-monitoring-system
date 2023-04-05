@@ -20,9 +20,10 @@ if (isset($_POST['out'])) {
 # Makukuha dapat sa session
 
 fetchAdvisoryInfo();
+
 function fetchAdvisoryInfo() {
     $con = connect();
-    
+		
     $stmt = $con->prepare('SELECT * FROM sections WHERE sectionadviserid = ?');
     $stmt->bind_param('i', $_SESSION['id']);
     $stmt->execute();
